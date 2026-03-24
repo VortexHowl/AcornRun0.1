@@ -1,0 +1,54 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    background-color: #0d0d1a; /* Dark Sci-Fi Space */
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    overflow: hidden;
+}
+
+#game-container {
+    display: block;
+}
+
+#ui-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.hidden {
+    display: none !important;
+}
+
+#shop-panel, #death-panel {
+    background: #1a1a3a;
+    border: 2px solid #00ffcc;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+button {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    background: #00ffcc;
+    color: #000;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:disabled {
+    background: #555;
+    cursor: not-allowed;
+}
