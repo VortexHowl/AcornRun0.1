@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Squirrel Gauntlet: ZEP Edition</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="game-container"></div>
+    
+    <div id="ui-layer" class="hidden">
+        <div id="shop-panel">
+            <h2>Cosmic Shop</h2>
+            <p>Wallet Balance: <span id="zep-balance">0</span> ZEP</p>
+            <button id="connect-wallet">Connect Phantom</button>
+            <button id="buy-upgrade" disabled>Buy Jetpack Upgrade (100 ZEP)</button>
+            <button id="close-shop">Return to Game</button>
+        </div>
+
+        <div id="death-panel" class="hidden">
+            <h2>GAME OVER</h2>
+            <p>High Score: <span id="final-score">0</span></p>
+            <button id="revive-btn">Revive (10 ZEP)</button>
+            <button id="restart-btn">Restart (Lose Progress)</button>
+        </div>
+    </div>
+
+    <script type="module" src="./game.js"></script>
+</body>
+</html>
