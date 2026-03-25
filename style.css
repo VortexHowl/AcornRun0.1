@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+canvas {
+    display: block;
+    image-rendering: pixelated;
+}
+
+body {
+    margin: 0;
+    cursor: crosshair;
+}
+
+.shop-btn-active {
+    @apply border-white/60 bg-white/10;
+}
