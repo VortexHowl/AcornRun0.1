@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zephyr Gauntlet</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body class="bg-cyber-dark overflow-hidden font-mono text-white">
+    <div id="game-container"></div>
+
+    <!-- HUD -->
+    <div class="fixed top-4 left-4 z-10 pointer-events-none">
+        <div class="bg-black/60 border-l-4 border-cyber-cyan p-3 backdrop-blur-md">
+            <p class="text-xs text-cyber-cyan uppercase tracking-tighter">Zephyr Balance</p>
+            <p id="zep-display" class="text-xl font-bold">0.00 ZEP</p>
+        </div>
+    </div>
+
+    <!-- Wallet Button -->
+    <div class="fixed top-4 right-4 z-20">
+        <button id="wallet-btn" class="bg-cyber-purple hover:scale-105 transition-transform px-6 py-2 rounded-full border border-white/20 shadow-[0_0_15px_rgba(188,19,254,0.4)] font-bold">
+            CONNECT WALLET
+        </button>
+    </div>
+
+    <!-- Cosmic Shop Overlay -->
+    <div id="shop-ui" class="hidden fixed inset-0 z-30 bg-black/80 backdrop-blur-md flex items-center justify-center p-4">
+        <div class="max-w-md w-full bg-white/5 border border-white/10 p-8 rounded-3xl shadow-2xl text-center">
+            <h2 class="text-4xl font-black italic text-transparent bg-clip-text bg-gradient-to-r from-cyber-cyan to-cyber-purple mb-2">COSMIC SHOP</h2>
+            <p class="text-gray-400 text-sm mb-8">LEVEL SEGMENT COMPLETE</p>
+            
+            <div class="space-y-4 mb-8">
+                <button id="upg-speed" class="w-full group disabled:opacity-30 border border-cyber-cyan/30 p-4 rounded-xl flex justify-between items-center hover:bg-cyber-cyan/10 transition-colors">
+                    <span class="text-cyber-cyan uppercase">Weapon Speed</span>
+                    <span class="text-xs opacity-60">Requires 500 ZEP</span>
+                </button>
+                <button id="upg-damage" class="w-full group disabled:opacity-30 border border-cyber-purple/30 p-4 rounded-xl flex justify-between items-center hover:bg-cyber-purple/10 transition-colors">
+                    <span class="text-cyber-purple uppercase">Heavy Rounds</span>
+                    <span class="text-xs opacity-60">Requires 1,000 ZEP</span>
+                </button>
+                <button id="upg-fuel" class="w-full group disabled:opacity-30 border border-white/20 p-4 rounded-xl flex justify-between items-center hover:bg-white/5 transition-colors">
+                    <span class="text-white uppercase">Reactor Core</span>
+                    <span class="text-xs opacity-60">Requires 2,500 ZEP</span>
+                </button>
+            </div>
+            
+            <button id="close-shop" class="text-cyber-cyan underline hover:text-white transition-colors">RESUME MISSION</button>
+        </div>
+    </div>
+
+    <!-- Game Over Screen -->
+    <div id="death-ui" class="hidden fixed inset-0 z-40 bg-red-950/90 backdrop-blur-xl flex items-center justify-center text-center">
+        <div>
+            <h1 class="text-7xl font-black mb-2">WIPED</h1>
+            <p id="final-score" class="text-2xl text-cyber-cyan mb-12 italic">SCORE: 0</p>
+            <div class="flex flex-col gap-4 items-center">
+                <button id="revive-btn" class="bg-green-500 hover:bg-green-400 text-black font-black px-12 py-4 rounded-full text-xl shadow-[0_0_30px_rgba(34,197,94,0.5)]">
+                    REVIVE FOR 10 ZEP
+                </button>
+                <button onclick="window.location.reload()" class="text-white/40 hover:text-white text-sm">ACCEPT FATE (PERMADEATH)</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="/main.js"></script>
+</body>
+</html>
