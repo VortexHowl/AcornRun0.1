@@ -1,18 +1,23 @@
 {
-  "name": "squirrel-gauntlet",
+  "name": "zephyr-gauntlet",
+  "private": true,
   "version": "1.0.0",
-  "description": "Sci-Fi Squirrel Web3 Game",
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "start": "npx serve -s dist"
+    "preview": "vite preview"
   },
   "dependencies": {
-    "@solana/spl-token": "^0.3.9",
+    "@solana/spl-token": "^0.3.8",
     "@solana/web3.js": "^1.87.6",
     "phaser": "^3.60.0"
   },
   "devDependencies": {
-    "vite": "^5.0.0"
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.31",
+    "tailwindcss": "^3.3.5",
+    "vite": "^4.5.0",
+    "vite-plugin-node-polyfills": "^0.17.0"
   }
 }
